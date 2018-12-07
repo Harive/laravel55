@@ -17,8 +17,12 @@ Route::get('/', function () {
 
 //直播项目
 Route::group(['prefix'=>'one'],function(){
+	//后台主页面
+	// Route::get('index',)
 	//注册
 	Route::any('registerindex','RegisterController@index');
-	//导航栏信息
+	//添加导航栏信息
 	Route::any('infiniteinsert','InfiniteController@insert');
+	//展示导航栏信息
+	Route::any('infiniteindex','InfiniteController@index');
 });

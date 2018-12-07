@@ -13,8 +13,6 @@
     <link href="{{asset('assets')}}/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
     <link href="{{asset('assets')}}/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="{{asset('assets')}}/js/bootstrap-datepicker/css/datepicker.css" />
-    <link rel="stylesheet" type="text/css" href="{{asset('assets')}}/js/bootstrap-daterangepicker/daterangepicker.css" />
         
     <!-- Custom styles for this template -->
     <link href="{{asset('assets')}}/css/style.css" rel="stylesheet">
@@ -243,21 +241,21 @@
                       </ul>
                   </li>
                   <li class="sub-menu">
-                      <a class="active" href="javascript:;" >
+                      <a href="javascript:;" >
                           <i class="fa fa-tasks"></i>
                           <span>Forms</span>
                       </a>
                       <ul class="sub">
-                          <li class="active"><a  href="form_component.html">Form Components</a></li>
+                          <li><a  href="form_component.html">Form Components</a></li>
                       </ul>
                   </li>
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a class="active" href="javascript:;" >
                           <i class="fa fa-th"></i>
                           <span>Data Tables</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="basic_table.html">Basic Table</a></li>
+                          <li class="active"><a  href="basic_table.html">Basic Table</a></li>
                           <li><a  href="responsive_table.html">Responsive Table</a></li>
                       </ul>
                   </li>
@@ -284,48 +282,47 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
-          	<h3><i class="fa fa-angle-right"></i>分类添加</h3>
-          	
-          	<!-- BASIC FORM ELELEMNTS -->
-          	<div class="row mt">
-          		<div class="col-lg-12">
-                  <div class="form-panel">
-                  	  <h4 class="mb"><i class="fa fa-angle-right"></i>添加导航栏分类</h4>
-                      <form class="form-horizontal style-form" method="post" action="/one/infiniteinsert">
-                      		{{csrf_field()}}
-                          <div class="form-group">
-                              <label class="col-sm-2 col-sm-2 control-label">导航名</label>
-                              <div class="col-sm-10">
-                                  <input type="text" class="form-control" name="priv_name">
-                              </div>
-                          </div>
-                          <div class="form-group">
-                              <label class="col-sm-2 col-sm-2 control-label">导航栏分类</label>
-                              <div class="col-sm-10">
-                                  <select name="p_id" class="form-control">
-										@foreach($data as $v)
-											<option value="{{$v->id}}">{{$v->priv_name}}</option>
-										@endforeach
-                                  </select>
-                              </div>
-                          </div>
-                          <div class="form-group">
-                              <label class="col-sm-2 col-sm-2 control-label">导航栏连接地址</label>
-                              <div class="col-sm-10">
-                                  <input type="text" class="form-control" placeholder="http://" name="priv_link">
-                              </div>
-                          </div>
-                         <div>
-							<input type="submit" class="form-control">
-                         </div>
-                      </form>
-                  </div>
-          		</div><!-- col-lg-12-->      	
-          	</div><!-- /row -->
-          	
-          	
-          	
-          	
+          	<h3><i class="fa fa-angle-right"></i>分类管理</h3>
+				<div class="row">
+				
+				</div>
+
+          <!-- row -->
+              <div class="row mt">
+                  <div class="col-md-12">
+                      <div class="content-panel">
+                          <table class="table table-striped table-advance table-hover">
+	                  	  	  <h4><i class="fa fa-angle-right"></i>导航栏管理</h4>
+	                  	  	  <hr>
+                              <thead>
+                              <tr>
+                                  <th><i class="fa fa-bullhorn"></i>分类id</th>
+                                  <th class="hidden-phone"><i class="fa fa-question-circle"></i>导航名</th>
+                                  <th><i class="fa fa-bookmark"></i>导航栏父id</th>
+                                  <th><i class=" fa fa-edit"></i>导航连接地址</th>
+                                  <th><i class="fa fa-bookmark"></i>操作</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              @foreach($data as $v)
+                                <tr>
+                                    <td>{{$v->id}}</td>
+                                    <td><a href="basic_table.html#">{{$v->priv_name}}</a></td>
+                                    <td class="hidden-phone">{{$v->p_id}}</td>
+                                    <td>{{$v->priv_link}}</td>
+                                    <td>
+                                        <a href="#"><button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button></a>
+                                        <a href="#"><button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button></a>
+                                        <a href="#"><button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button></a>
+                                    </td>
+                                </tr>
+                             @endforeach
+                              </tbody>
+                          </table>
+                      </div><!-- /content-panel -->
+                  </div><!-- /col-md-12 -->
+              </div><!-- /row -->
+
 		</section><! --/wrapper -->
       </section><!-- /MAIN CONTENT -->
 
@@ -334,7 +331,7 @@
       <footer class="site-footer">
           <div class="text-center">
               2014 - Alvarez.is
-              <a href="form_component.html#" class="go-top">
+              <a href="basic_table.html#" class="go-top">
                   <i class="fa fa-angle-up"></i>
               </a>
           </div>
@@ -354,25 +351,6 @@
     <script src="{{asset('assets')}}/js/common-scripts.js"></script>
 
     <!--script for this page-->
-    <script src="{{asset('assets')}}/js/jquery-ui-1.9.2.custom.min.js"></script>
-
-	<!--custom switch-->
-	<script src="{{asset('assets')}}/js/bootstrap-switch.js"></script>
-	
-	<!--custom tagsinput-->
-	<script src="{{asset('assets')}}/js/jquery.tagsinput.js"></script>
-	
-	<!--custom checkbox & radio-->
-	
-	<script type="text/javascript" src="{{asset('assets')}}/js/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-	<script type="text/javascript" src="{{asset('assets')}}/js/bootstrap-daterangepicker/date.js"></script>
-	<script type="text/javascript" src="{{asset('assets')}}/js/bootstrap-daterangepicker/daterangepicker.js"></script>
-	
-	<script type="text/javascript" src="{{asset('assets')}}/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
-	
-	
-	<script src="{{asset('assets')}}/js/form-component.js"></script>    
-    
     
   <script>
       //custom select box
