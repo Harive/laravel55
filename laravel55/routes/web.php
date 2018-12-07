@@ -38,3 +38,21 @@ Route::group(['prefix'=>'one'],function(){
 	//搜索
 	Route::any('infinitesearch/{sear}','InfiniteController@search');
 });
+
+
+//用户管理
+Route::group(['prefix'=>'user'] , function(){
+    //显示
+    Route::get('index','User\UserController@index');
+    //跳转添加
+    Route::get('insertadd','User\UserController@insertadd');
+    //执行添加
+    Route::post('inserts', 'User\UserController@inserts');
+    //执行删除
+    Route::any('deletes/{id?}', 'User\UserController@deletes');
+    //跳转修改
+    Route::get('update/{id?}', 'User\UserController@updateadd');
+    //执行修改
+    Route::post('updateas', 'User\UserController@updateas');
+
+});
