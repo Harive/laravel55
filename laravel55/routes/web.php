@@ -27,4 +27,10 @@ Route::group(['prefix'=>'one'],function(){
 	Route::any('infiniteinsert','InfiniteController@insert');
 	//展示导航栏信息
 	Route::any('infiniteindex','InfiniteController@index');
+	//导航信息详情
+	Route::any('infinitelist/{id}','InfiniteController@list');
+	//修改导航信息
+	Route::any('infiniteupdate/{id}','InfiniteController@update');
+	//删除导航信息
+	Route::any('infinitedelete/{id}','InfiniteController@delete');
 });
