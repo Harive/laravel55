@@ -23,13 +23,13 @@ class LoginController extends Controller
 	        //var_dump($model);die;
 			if($model){
 	            // echo "登录成功";
-				return view('index');
+				return redirect('/one/infiniteindex');
 	             
 			}else{
-				return view('one/loginindex');
+				return redirect('/one/loginindex');
 			}
 		}else{
-			return view('one/loginindex');
+			return redirect('/one/loginindex');
 		}
 	}
     
