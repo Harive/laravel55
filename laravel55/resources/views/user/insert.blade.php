@@ -10,15 +10,15 @@
     <title>fuya</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{asset('asset')}}/css/bootstrap.css" rel="stylesheet">
+    <link href="{{asset('assets')}}/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
-    <link href="{{asset('asset')}}/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="{{asset('asset')}}/js/bootstrap-datepicker/css/datepicker.css" />
-    <link rel="stylesheet" type="text/css" href="{{asset('asset')}}/js/bootstrap-daterangepicker/daterangepicker.css" />
+    <link href="{{asset('assets')}}/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{{asset('assets')}}/js/bootstrap-datepicker/css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('assets')}}/js/bootstrap-daterangepicker/daterangepicker.css" />
 
     <!-- Custom styles for this template -->
-    <link href="{{asset('asset')}}/css/style.css" rel="stylesheet">
-    <link href="{{asset('asset')}}/css/style-responsive.css" rel="stylesheet">
+    <link href="{{asset('assets')}}/css/style.css" rel="stylesheet">
+    <link href="{{asset('assets')}}/css/style-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -126,7 +126,7 @@
                         </li>
                         <li>
                             <a href="index.html#">
-                                <span class="photo"><img alt="avatar" src="{{asset('asset')}}/img/ui-zac.jpg"></span>
+                                <span class="photo"><img alt="avatar" src="{{asset('assets')}}/img/ui-zac.jpg"></span>
                                 <span class="subject">
                                     <span class="from">Zac Snider</span>
                                     <span class="time">Just now</span>
@@ -138,7 +138,7 @@
                         </li>
                         <li>
                             <a href="index.html#">
-                                <span class="photo"><img alt="avatar" src="{{asset('asset')}}/img/ui-divya.jpg"></span>
+                                <span class="photo"><img alt="avatar" src="{{asset('assets')}}/img/ui-divya.jpg"></span>
                                 <span class="subject">
                                     <span class="from">Divya Manian</span>
                                     <span class="time">40 mins.</span>
@@ -150,7 +150,7 @@
                         </li>
                         <li>
                             <a href="index.html#">
-                                <span class="photo"><img alt="avatar" src="{{asset('asset')}}/img/ui-danro.jpg"></span>
+                                <span class="photo"><img alt="avatar" src="{{asset('assets')}}/img/ui-danro.jpg"></span>
                                 <span class="subject">
                                     <span class="from">Dan Rogers</span>
                                     <span class="time">2 hrs.</span>
@@ -162,7 +162,7 @@
                         </li>
                         <li>
                             <a href="index.html#">
-                                <span class="photo"><img alt="avatar" src="{{asset('asset')}}/img/ui-sherman.jpg"></span>
+                                <span class="photo"><img alt="avatar" src="{{asset('assets')}}/img/ui-sherman.jpg"></span>
                                 <span class="subject">
                                     <span class="from">Dj Sherman</span>
                                     <span class="time">4 hrs.</span>
@@ -198,7 +198,7 @@
             <!-- sidebar menu start-->
             <ul class="sidebar-menu" id="nav-accordion">
 
-                <p class="centered"><a href="profile.html"><img src="{{asset('asset')}}/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+                <p class="centered"><a href="profile.html"><img src="{{asset('assets')}}/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
                 <h5 class="centered">Marcel Newman</h5>
 
                 <li class="mt">
@@ -356,35 +356,35 @@
 </section>
 
 <!-- js placed at the end of the document so the pages load faster -->
-<script src="{{asset('asset')}}/js/jquery.js"></script>
-<script src="{{asset('asset')}}/js/bootstrap.min.js"></script>
-<script class="include" type="text/javascript" src="{{asset('asset')}}/js/jquery.dcjqaccordion.2.7.js"></script>
-<script src="{{asset('asset')}}/js/jquery.scrollTo.min.js"></script>
-<script src="{{asset('asset')}}/js/jquery.nicescroll.js" type="text/javascript"></script>
+<script src="{{asset('assets')}}/js/jquery.js"></script>
+<script src="{{asset('assets')}}/js/bootstrap.min.js"></script>
+<script class="include" type="text/javascript" src="{{asset('assets')}}/js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="{{asset('assets')}}/js/jquery.scrollTo.min.js"></script>
+<script src="{{asset('assets')}}/js/jquery.nicescroll.js" type="text/javascript"></script>
 
 
 <!--common script for all pages-->
-<script src="{{asset('asset')}}/js/common-scripts.js"></script>
+<script src="{{asset('assets')}}/js/common-scripts.js"></script>
 
 <!--script for this page-->
-<script src="{{asset('asset')}}/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="{{asset('assets')}}/js/jquery-ui-1.9.2.custom.min.js"></script>
 
 <!--custom switch-->
-<script src="{{asset('asset')}}/js/bootstrap-switch.js"></script>
+<script src="{{asset('assets')}}/js/bootstrap-switch.js"></script>
 
 <!--custom tagsinput-->
-<script src="{{asset('asset')}}/js/jquery.tagsinput.js"></script>
+<script src="{{asset('assets')}}/js/jquery.tagsinput.js"></script>
 
 <!--custom checkbox & radio-->
 
-<script type="text/javascript" src="{{asset('asset')}}/js/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-<script type="text/javascript" src="{{asset('asset')}}/js/bootstrap-daterangepicker/date.js"></script>
-<script type="text/javascript" src="{{asset('asset')}}/js/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script type="text/javascript" src="{{asset('assets')}}/js/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="{{asset('assets')}}/js/bootstrap-daterangepicker/date.js"></script>
+<script type="text/javascript" src="{{asset('assets')}}/js/bootstrap-daterangepicker/daterangepicker.js"></script>
 
-<script type="text/javascript" src="{{asset('asset')}}/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
+<script type="text/javascript" src="{{asset('assets')}}/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
 
 
-<script src="{{asset('asset')}}/js/form-component.js"></script>
+<script src="{{asset('assets')}}/js/form-component.js"></script>
 
 
 <script>
