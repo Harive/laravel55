@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//直播项目
+Route::group(['prefix'=>'one'],function(){
+	//注册
+	Route::any('registerindex','RegisterController@index');
+	//导航栏信息
+	Route::any('infiniteinsert','InfiniteController@insert');
+});
