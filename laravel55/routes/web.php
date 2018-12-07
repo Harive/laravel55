@@ -21,6 +21,8 @@ Route::group(['prefix'=>'one'],function(){
 	// Route::get('index',)
 	//注册
 	Route::any('registerindex','RegisterController@index');
+    //登录 
+	Route::any('loginindex','LoginController@login');
 	//添加导航栏信息
 	Route::any('infiniteinsert','InfiniteController@insert');
 	//展示导航栏信息
