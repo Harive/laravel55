@@ -99,4 +99,29 @@
 				return redirect('/one/infiniteindex');
 			}
 		}
+		/**
+		 * 批量删除
+		 * get
+		 */
+		public function delete2(){
+			$ids=request()->id;
+			// var_dump($ids);die;
+			$str=explode(",",$ids);
+			// var_dump($str);die;
+			foreach($str as $v){
+		        DB::table('privileges')->where('id',"=","$v")->delete();
+		    }
+		    return  redirect("/one/infiniteindex");
+		}
+		/**
+		 * 搜索
+		 * get
+		 */
+		public function search(){
+			$se=request()->sear;
+			// var_dump($se);
+			$data=DB::table('privileges')->where('priv_name',$se)->get();
+			// var_dump($data);die;
+			return view('/one/infinitesearchindex',['data'=>$data]);
+		}
 	}

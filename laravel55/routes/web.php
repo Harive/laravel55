@@ -33,4 +33,8 @@ Route::group(['prefix'=>'one'],function(){
 	Route::any('infiniteupdate/{id}','InfiniteController@update');
 	//删除导航信息
 	Route::any('infinitedelete/{id}','InfiniteController@delete');
+	//批量删除
+	Route::any('infinitedelete2/{id}','InfiniteController@delete2');
+	//搜索
+	Route::any('infinitesearch/{sear}','InfiniteController@search');
 });
