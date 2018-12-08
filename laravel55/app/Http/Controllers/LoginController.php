@@ -29,7 +29,7 @@ class LoginController extends Controller
 				return redirect('/one/loginindex');
 			}
 		}else{
-			return redirect('/one/loginindex');
+			return view('/one/loginindex');
 		}
 	}
     
