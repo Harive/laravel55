@@ -13,7 +13,7 @@
 			if(request()->isMethod('get')){
 				//查询表中数据
 				$data=DB::table('live')->get();
-				return view('/one/Liveinsert',['data'=>$data]);
+				return view('/one/liveinsert',['data'=>$data]);
 			}
 			elseif(request()->isMethod('post')){
 				$data=request()->all();
