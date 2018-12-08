@@ -120,6 +120,7 @@
 		public function search(){
 			$se=request()->sear;
 			// var_dump($se);
+			// 跟据导航分类名查询
 			$data=DB::table('privileges')->where('priv_name',$se)->get();
 			// var_dump($data);die;
 			return view('/one/infinitesearchindex',['data'=>$data]);

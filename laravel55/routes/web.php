@@ -37,8 +37,22 @@ Route::group(['prefix'=>'one'],function(){
 	Route::any('infinitedelete2/{id}','InfiniteController@delete2');
 	//搜索
 	Route::any('infinitesearch/{sear}','InfiniteController@search');
-});
+	//添加直播信息
+	Route::any('liveinsert','LiveController@insert');
+	//展示直播信息
+	Route::any('liveindex','LiveController@index');
+	//导航信息详情
+	Route::any('livelist/{id}','LiveController@list');
+	//修改导航信息
+	Route::any('liveupdate/{id}','LiveController@update');
+	//删除导航信息
+	Route::any('livedelete/{id}','LiveController@delete');
+	//批量删除
+	Route::any('livedelete2/{id}','LiveController@delete2');
+	//搜索
+	Route::any('livesearch/{sear}','LiveController@search');
 
+});
 
 //用户管理
 Route::group(['prefix'=>'user'] , function(){
