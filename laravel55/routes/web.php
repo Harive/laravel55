@@ -23,6 +23,8 @@ Route::group(['prefix'=>'one'],function(){
 	Route::any('registerindex','RegisterController@index');
     //登录 
 	Route::any('loginindex','LoginController@login');
+	//退出登录
+	Route::any('logout','LoginController@logout');
 	//添加导航栏信息
 	Route::any('infiniteinsert','InfiniteController@insert');
 	//展示导航栏信息

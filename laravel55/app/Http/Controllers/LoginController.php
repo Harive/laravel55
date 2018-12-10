@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\DB;
 
 use App\Model\Login;
 
+use Session;
+
 class LoginController extends Controller
 {
 
@@ -22,6 +24,8 @@ class LoginController extends Controller
 			$model=Login::matchinguser($data);
 	        //var_dump($model);die;
 			if($model){
+				Session::put('user_info',$data['telphone']);
+				//var_dump($a=Session::all());die;
 	            // echo "登录成功";
 				return redirect('/one/infiniteindex');
 	             
@@ -32,6 +36,15 @@ class LoginController extends Controller
 			return view('/one/loginindex');
 		}
 	}
+
+	//    退出
+    public function logout(){
+        if (isset($_SESSION['user_info'])){
+            unset($_SESSION['user_info']);
+        }
+        return view("/one/loginindex");
+    }
+
     
 }
 

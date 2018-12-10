@@ -181,7 +181,7 @@
             </div>
             <div class="top-menu">
               <ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">Logout</a></li>
+                    <li><a class="logout" href="{{url('one/logout')}}">Logout</a></li>
               </ul>
             </div>
         </header>
@@ -204,7 +204,7 @@
                   <h5 class="centered">Marcel Newman</h5>
                     
                   <li class="mt">
-                      <a class="active" href="index.html">
+                      <a class="active" href="{{url('one/infiniteindex')}}">
                           <i class="fa fa-dashboard"></i>
                           <span>导航栏</span>
                       </a>
@@ -228,30 +228,16 @@
                           <span>RBAC</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="calendar.html">Calendar</a></li>
+                          <li><a  href="{{url('user/index')}}">用户管理</a></li>
                           <li><a  href="gallery.html">Gallery</a></li>
                           <li><a  href="todo_list.html">Todo List</a></li>
                       </ul>
                   </li>
                   <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-book"></i>
-                          <span>用户管理</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="blank.html">Blank Page</a></li>
-                          <li><a  href="login.html">Login</a></li>
-                          <li><a  href="lock_screen.html">Lock Screen</a></li>
-                      </ul>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a class="active" href="{{url('one/liveindex')}}" >
                           <i class="fa fa-tasks"></i>
-                          <span>Forms</span>
+                          <span>直播分类</span>
                       </a>
-                      <ul class="sub">
-                          <li><a  href="form_component.html">Form Components</a></li>
-                      </ul>
                   </li>
                   <li class="sub-menu">
                       <a href="javascript:;" >
