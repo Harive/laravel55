@@ -70,3 +70,10 @@ Route::group(['prefix'=>'user'] , function(){
     Route::post('updateas', 'User\UserController@updateas');
 
 });
+
+//权限
+Route::any('auth1/index','Auth1\Auth1Controller@index');
+Route::any('auth1/insert','Auth1\Auth1Controller@insert');
+Route::any('deleteauth/{id}','Auth1\Auth1Controller@deleteauth');
+Route::any('auth1/edit/{id}','Auth1\Auth1Controller@edit');
+Route::any('checkdel','Auth1\Auth1Controller@checkdel');
