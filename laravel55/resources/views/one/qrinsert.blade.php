@@ -9,29 +9,26 @@
        <section id="container" >
       <section id="main-content">
           <section class="wrapper site-min-height">
-          	<h3><i class="fa fa-angle-right"></i>分类添加</h3>
+          	<h3><i class="fa fa-angle-right"></i>二维码添加</h3>
           	
           	<!-- BASIC FORM ELELEMNTS -->
           	<div class="row mt">
           		<div class="col-lg-12">
                   <div class="form-panel">
-                  	  <h4 class="mb"><i class="fa fa-angle-right"></i>添加直播分类</h4>
-                      <form class="form-horizontal style-form" method="post" action="/one/liveinsert">
+                  	  <h4 class="mb"><i class="fa fa-angle-right"></i>添加二维码</h4>
+                      <form class="form-horizontal style-form" method="post" action="/one/qrinsert" enctype="multipart/form-data">
                       		{{csrf_field()}}
                           <div class="form-group">
-                              <label class="col-sm-2 col-sm-2 control-label">直播分类名</label>
-                              <div class="col-sm-10">
-                                  <input type="text" class="form-control" name="live_name">
-                              </div>
-                          </div>
                           <div class="form-group">
-                              <label class="col-sm-2 col-sm-2 control-label">直播分类</label>
+                              <label class="col-sm-2 col-sm-2 control-label">二维码图片</label>
                               <div class="col-sm-10">
-                                  <select name="p_id" class="form-control">
-										@foreach($data as $v)
-											<option value="{{$v->id}}">{{$v->live_name}}</option>
-										@endforeach
-                                  </select>
+                                  <input type="file" name="qr_photo">
+                              </div>
+                          </div>                        
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">二维码信息</label>
+                              <div class="col-sm-10">
+                                  <input type="text" class="form-control" name="qr_info">
                               </div>
                           </div>
                          <div>

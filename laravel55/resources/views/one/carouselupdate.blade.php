@@ -9,31 +9,39 @@
        <section id="container" >
       <section id="main-content">
           <section class="wrapper site-min-height">
-          	<h3><i class="fa fa-angle-right"></i>分类添加</h3>
+          	<h3><i class="fa fa-angle-right"></i>轮播图添加</h3>
           	
           	<!-- BASIC FORM ELELEMNTS -->
           	<div class="row mt">
           		<div class="col-lg-12">
                   <div class="form-panel">
-                  	  <h4 class="mb"><i class="fa fa-angle-right"></i>添加直播分类</h4>
-                      <form class="form-horizontal style-form" method="post" action="/one/liveinsert">
+                  	  <h4 class="mb"><i class="fa fa-angle-right"></i>添加轮播图</h4>
+                  	  @foreach($data as $v)
+                      <form class="form-horizontal style-form" method="post" action="/one/carouselupdate/{{$v->id}}" enctype="multipart/form-data">
                       		{{csrf_field()}}
                           <div class="form-group">
-                              <label class="col-sm-2 col-sm-2 control-label">直播分类名</label>
+                          
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">轮播图图片</label>
                               <div class="col-sm-10">
-                                  <input type="text" class="form-control" name="live_name">
+                              		<img src="{{$v->car_photo}}" alt="">	
+                                  <input type="file" name="car_photo">
                               </div>
                           </div>
                           <div class="form-group">
-                              <label class="col-sm-2 col-sm-2 control-label">直播分类</label>
+                              <label class="col-sm-2 col-sm-2 control-label">轮播图状态</label>
                               <div class="col-sm-10">
-                                  <select name="p_id" class="form-control">
-										@foreach($data as $v)
-											<option value="{{$v->id}}">{{$v->live_name}}</option>
-										@endforeach
-                                  </select>
+                                  <input type="radio" class="form-control" name="car_status" value="1">显示
+                                  <input type="radio" class="form-control" name="car_status" value="0">不显示
                               </div>
                           </div>
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">轮播图排序</label>
+                              <div class="col-sm-10">
+                                  <input type="text" class="form-control" name="car_sort" value="{{$v->car_sort}}">
+                              </div>
+                          </div>
+                          @endforeach
                          <div>
 							<input type="submit" class="form-control">
                          </div>

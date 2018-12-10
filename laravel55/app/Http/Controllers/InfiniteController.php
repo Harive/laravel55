@@ -38,7 +38,7 @@
 		 * get
 		 */
 		public function index(){
-			$data=DB::table('privileges')->get();
+			$data=DB::table('privileges')->paginate(2);
 			//添加页面
 			return view('one/infiniteindex',['data'=>$data]);
 		}

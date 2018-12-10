@@ -38,7 +38,7 @@
 		 */
 		public function index(){
 			//查询表中数据
-			$data=DB::table('live')->get();
+			$data=DB::table('live')->paginate(2);
 			//渲染到页面
 			return view('/one/liveindex',['data'=>$data]);
 		}

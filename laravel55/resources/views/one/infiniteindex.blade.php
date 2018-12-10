@@ -32,6 +32,7 @@
                                   <th><i class="fa fa-bullhorn"></i>分类id</th>
                                   <th class="hidden-phone"><i class="fa fa-question-circle"></i>导航名</th>
                                   <th><i class="fa fa-bookmark"></i>导航栏父id</th>
+                                  <th><i class="fa fa-bookmark"></i>导航状态</th>
                                   <th><i class=" fa fa-edit"></i>导航连接地址</th>
                                   <th><i class="fa fa-bookmark"></i>操作</th>
                               </tr>
@@ -41,8 +42,9 @@
                                 <tr>
                                     <td><input type="checkbox" class="so" value="{{$v->id}}"></td>
                                     <td>{{$v->id}}</td>
-                                    <td><a href="basic_table.html#">{{$v->priv_name}}</a></td>
-                                    <td class="hidden-phone">{{$v->p_id}}</td>
+                                    <td>{{$v->priv_name}}</a></td>
+                                    <td>{{$v->p_id}}</td>
+                                    <td>{{$v->status}}</td>
                                     <td>{{$v->priv_link}}</td>
                                     <td>
                                         <a href="/one/infinitelist/{{$v->id}}"><button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button></a>
@@ -53,7 +55,10 @@
                              @endforeach
                              <tr>
                                 <td colspan="3"><input type="button" onclick="del()" value="删除"></td>
-                                <td colspan="3"><input type="button" onclick="choose()" value="反选"></td>
+                                <td colspan="4"><input type="button" onclick="choose()" value="反选"></td>
+                             </tr>
+                             <tr>
+                                <td colspan="7">{{$data->links()}}</td>
                              </tr>
                               </tbody>
                           </table>

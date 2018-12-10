@@ -17,14 +17,13 @@ Route::get('/', function () {
 
 //直播项目
 Route::group(['prefix'=>'one'],function(){
-	//后台主页面
-	// Route::get('index',)
 	//注册
 	Route::any('registerindex','RegisterController@index');
     //登录 
 	Route::any('loginindex','LoginController@login');
 	//退出登录
 	Route::any('logout','LoginController@logout');
+
 	//添加导航栏信息
 	Route::any('infiniteinsert','InfiniteController@insert');
 	//展示导航栏信息
@@ -39,6 +38,7 @@ Route::group(['prefix'=>'one'],function(){
 	Route::any('infinitedelete2/{id}','InfiniteController@delete2');
 	//搜索
 	Route::any('infinitesearch/{sear}','InfiniteController@search');
+
 	//添加直播信息
 	Route::any('liveinsert','LiveController@insert');
 	//展示直播信息
@@ -54,6 +54,35 @@ Route::group(['prefix'=>'one'],function(){
 	//搜索
 	Route::any('livesearch/{sear}','LiveController@search');
 
+	//轮播图展示页面
+	Route::any('carouselindex','CarouselController@index');
+	//添加轮播图信息
+	Route::any('carouselinsert','CarouselController@insert');
+	//轮播图详细信息
+	Route::any('carousellist/{id}','CarouselController@list');
+	//删除轮播图信息
+	Route::any('carouseldelete/{id}','CarouselController@delete');
+	//批量删除
+	Route::any('carouseldelete2/{id}','CarouselController@delete2');
+	//修改轮播图信息
+	Route::any('carouselupdate/{id}','CarouselController@update');
+	//搜索
+	Route::any('carouselsearch/{sear}','CarouselController@search');
+
+	//联系我们添加二维码信息
+	Route::any('qrinsert','QrController@insert');
+	//展示信息
+	Route::any('qrindex','QrController@index');
+	//详细信息
+	Route::any('qrlist/{id}','QrController@list');
+	//修改信息
+	Route::any('qrupdate/{id}','QrController@update');
+	//删除信息
+	Route::any('qrdelete/{id}','QrController@delete');
+	//批量删除
+	Route::any('qrdelete2/{id}','QrController@delete2');
+	//搜索
+	Route::any('qrsearch/{sear}','QrController@search');
 });
 
 //用户管理
