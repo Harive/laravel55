@@ -28,6 +28,7 @@
 						$message->subject('注册结果');
 						$message->to(Session::get('email'));
 					});
+					return redirect('/one/loginindex');
 				}
 			}
 		}
