@@ -107,4 +107,5 @@
         $.backstretch("{{asset('assets')}}/img/login-bg.jpg", {speed: 500});
     </script>
 
-@endsection
+</body>
+</html>
