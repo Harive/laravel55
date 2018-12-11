@@ -55,7 +55,7 @@ Route::group(['prefix'=>'one'],function(){
 	Route::any('livesearch/{sear}','LiveController@search');
 
 	//轮播图展示页面
-	Route::any('carouselindex','CarouselController@index');
+        Route::any('carouselindex','CarouselController@index');
 	//添加轮播图信息
 	Route::any('carouselinsert','CarouselController@insert');
 	//轮播图详细信息
