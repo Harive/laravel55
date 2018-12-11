@@ -26,6 +26,7 @@ class UserModels extends Model
     public function updateadd($id){
         $res = DB::table('user')->where('id',$id)->first();
         return $res;
+        status
     }
     //执行修改
     public static function updateadds($id,$data)
